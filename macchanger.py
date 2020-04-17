@@ -12,7 +12,7 @@ def user_get_inputs():
   parse_object.add_option("-i","--interface",dest="interface",help="please enter interface name")
   parse_object.add_option("-m","--mac",dest="mac_address",help="please enter new mac address")
 
-  (user_inputs,arguments) = parse_object.parse_args()
+  return parse_object.parse_args()
 
 #print(user_inputs.interface)
 #print(user_inputs.mac_address)
