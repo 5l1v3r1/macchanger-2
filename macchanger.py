@@ -29,3 +29,7 @@ def change_mac_address(user_interface,user_mac_address)
   subprocess.call(["ifconfig",user_interface,"down"])
   subprocess.call(["ifconfig",user_interface,"hw","ether",user_mac_address])
   subprocess.call(["ifconfig",user_interface,"up"])
+  
+print("MacChanger Start ")
+(user_input,arguments) = user_get_inputs()
+change_mac_address(user_input.interface,user_input.mac_address)
